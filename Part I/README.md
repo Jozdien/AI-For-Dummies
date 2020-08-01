@@ -81,7 +81,7 @@ Now take this new set of numbers:
 If you simply multiply every number in this new table with the numbers we got from each image, what would we get?
 
 Don't worry, you don't have to think about the math if you don't want to.  
-The first picture:  100\*1 + 100\*1 - 100\*1 - 100\*1 = 0
+The first picture:  100\*1 + 100\*1 - 100\*1 - 100\*1 = 0   
 The second picture:  100\*1 + 100\*1 - 100\*0 - 100\*0 = 200
 
 So, the computer can use this table of numbers and receive a large number for horizontal lines in an image, thus identifying them.  In an image with many pixels, this sort of operation is performed on every small set of pixels (like the 2x2 squares we are looking at), and a smaller matrix is obtained from the operation, as every set is reduced to one number each.  For example, if the second picture above were part of a larger image, this operation performed on the image would result in that portion reducing from the 2x2 matrix above, to the number 200.
