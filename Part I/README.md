@@ -12,19 +12,19 @@ All of them achieve the same basic goal - making a computer learn how to solve p
 
 Machine Learning comprises a large group of methods by which a computer can learn from data, so here, we'll look at what those methods are really doing.  
 
-At its core, ML is about using algorithms to analyse and predict patterns in data.  If a computer is given a set of data about the heights and weights of different people, and we want to use that to predict someone's height using just their weight, then we train the computer on the data we do have, so that it can have a decent understanding of the correlation between height and weight.  How does it do that? Magic*.
+At its core, ML is about using algorithms to analyse and predict patterns in data.  If a computer is given a set of data about the heights and weights of different people, and we want to use that to predict someone's height using just their weight, then we train the computer on the data we do have, so that it can have a decent understanding of the correlation between height and weight.  How does it do that? Magic\*.
 
-*More accurately, Math.
+\*More accurately, Math.
 
 Despite what some say, the math really is simple at the core.  You take a graph of variables, and plot a line connecting the points on it.  Look at this graph, for instance: 
 
-{Image}
+![Data Points]( "Data Points")
 
-If you wanted to predict what Y would be for a new value of X (e.g: 16), how would you do it?  (Seriously, how would you do it?  I can't remember.)
+If you wanted to predict what Y would be for a new value of X (e.g: 16, with the actual Y value being 14.2), how would you do it?  (Seriously, how would you do it?  I can't remember.)
 
-So after some a few Google searches, it turns out that you draw a straight line roughly connecting all the points, and then look at what Y the new X would give on that line, and you can see it comes pretty close to the actual answer.
+So after some a few Google searches, it turns out that you draw a straight line roughly connecting all the points, and then look at what Y the new X would give on that line, and you can see it comes pretty close to the actual answer (marked with the orange dashed lines).
 
-{Image}
+![Data Points]( "Data Points")
 
 That's Machine Learning.  No seriously, that's the basic idea.  You give the computer a lot of data like this, and it "understands" it by finding patterns in them. 
 
@@ -32,13 +32,13 @@ That's Machine Learning.  No seriously, that's the basic idea.  You give the com
 
 Well, you might have noticed that the predicted value of Y isn't **exactly** the same as the actual value.  Now, because people are picky as hell, they want more accuracy.  So we end up with patterns like:
 
-{Image}
+![Data Points]( "Data Points")
 
 Now here, we fit exactly each point to a weird, zig-zaggy line.  But if you were looking closely, you'd see that here too, the predicted value of Y is slightly wrong.  This is because in a real-world scenario, there are more variables involved than the ones we're looking at, so individual data points may be affected in different ways, and trying to get a perfect fit will lead to errors because of the over-reliance on those individual points.  Think of it as a group of people working together toward some goal.  When each of them has less individual power, their common goal becomes more prominent, while if everyone had more power, they'd try to push things toward their own personal goals.
 
 Thus, simply connecting the data with a straight line can get you wrong answers because you're not accurate enough, and connecting it with too perfect a fit can get you wrong answers because you're trying too hard to be accurate.  One of the real problems in Machine Learning comes in trying to hit the perfect middle.  For example, look at the following graph:
 
-{Graph}
+![Data Points]( "Data Points")
 
 As you can see, here we have a curvy graph that's more flexible than a straight line, but doesn't try to be a perfect fit.  Thus, we have a predicted value of Y that's closer to the actual value than we did before.
 
@@ -56,7 +56,9 @@ That's the idea behind deep learning.  When machine learning first came to the m
 
 Look at these two pictures.  One contains just one section of solid colour, and the other contains a horizontal line separating two sections.  
 
-{Image}
+Picture1                   |  Picture 2
+:-------------------------:|:-------------------------:
+![]()   |  ![]()
 
 Now, how would you make a computer recognize that one has a line and the other doesn't?  Well, the images can be represented as:
 
