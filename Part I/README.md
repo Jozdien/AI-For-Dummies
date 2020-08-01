@@ -54,7 +54,7 @@ How would you teach a baby what a "dog" is?  I doubt you'd get very far trying t
 
 That's the idea behind deep learning.  When machine learning first came to the mainstream, it was amazing.  It was powerful, and it got great results.  But people saw that it didn't quite work like human minds do.  Hence, the development of this field, where you teach a computer to associate certain characteristics with a concept through simplifying visual data into simpler forms, like you'd simplify the sight of an animal into characteristics such as "four legs", "tail", "dull claws", and simplify those further into "dog".
 
-Look at these two pictures.  One contains just one section of solid colour, and the other contains a horizontal line separating two sections.  
+Look at these two pictures.  One contains just one section of solid colour, and the other contains a black section and a white section separated by an invisible line (I know it looks like there's just black, but the white's there, it's just blending into the background really well).  
 
 Picture1                   |  Picture 2
 :-------------------------:|:-------------------------:
@@ -67,7 +67,7 @@ Now, how would you make a computer recognize that one has a line and the other d
 |<table> <td>1</td><td>1</td><tr><td>1</td><td>1</td></tr> </table> | <table> <tr><td>1</td><td>1</td></tr><tr><td>0</td><td>0</td></tr> </table>|
 
 
-Where 0 stands for a white pixel, and 1 for a black pixel.  
+Where 1 stands for a black pixel, and 0 for a white pixel.  
 
 **Warning:  There is math ahead, but it's not complicated.  Really.**
 
