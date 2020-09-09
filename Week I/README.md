@@ -18,13 +18,13 @@ At its core, ML is about using algorithms to analyse and predict patterns in dat
 
 Despite what some say, the math really is simple at the core.  You take a graph of variables, and plot a line connecting the points on it.  Look at this graph, for instance: 
 
-![Data Points](https://github.com/Jozdien/Basics-of-AI/blob/master/Part%20I/Pictures/Points.png "Data Points")
+![Data Points](https://github.com/Jozdien/Basics-of-AI/blob/master/Week%20I/Pictures/Points.png "Data Points")
 
 If you wanted to predict what Y would be for a new value of X (e.g: 16, with the actual Y value being 14.2), how would you do it?  (Seriously, how would you do it?  I can't remember.)
 
 So after some a few Google searches, it turns out that you draw a straight line roughly connecting all the points, and then look at what Y the new X would give on that line, and you can see it comes pretty close to the actual answer (marked with the orange dashed lines).
 
-![Linear Regression](https://github.com/Jozdien/Basics-of-AI/blob/master/Part%20I/Pictures/Linear_Regression.png "Linear Regression")
+![Linear Regression](https://github.com/Jozdien/Basics-of-AI/blob/master/Week%20I/Pictures/Linear_Regression.png "Linear Regression")
 
 That's Machine Learning.  No seriously, that's the basic idea.  You give the computer a lot of data like this, and it "understands" it by finding patterns in them. 
 
@@ -32,13 +32,13 @@ That's Machine Learning.  No seriously, that's the basic idea.  You give the com
 
 Well, you might have noticed that the predicted value of Y isn't **exactly** the same as the actual value.  Now, because people are picky as hell, they want more accuracy.  So we end up with patterns like:
 
-![Exact Fit](https://github.com/Jozdien/Basics-of-AI/blob/master/Part%20I/Pictures/Exact_Fit.png "Exact Fit")
+![Exact Fit](https://github.com/Jozdien/Basics-of-AI/blob/master/Week%20I/Pictures/Exact_Fit.png "Exact Fit")
 
 Now here, we fit exactly each point to a weird, zig-zaggy line.  But if you were looking closely, you'd see that here too, the predicted value of Y is slightly wrong.  This is because in a real-world scenario, there are more variables involved than the ones we're looking at, so individual data points may be affected in different ways, and trying to get a perfect fit will lead to errors because of the over-reliance on those individual points.  Think of it as a group of people working together toward some goal.  When each of them has less individual power, their common goal becomes more prominent, while if everyone had more power, they'd try to push things toward their own personal goals.
 
 Thus, simply connecting the data with a straight line can get you wrong answers because you're not accurate enough, and connecting it with too perfect a fit can get you wrong answers because you're trying too hard to be accurate.  One of the real problems in Machine Learning comes in trying to hit the perfect middle.  For example, look at the following graph:
 
-![Quadratic Regression](https://github.com/Jozdien/Basics-of-AI/blob/master/Part%20I/Pictures/Quadratic_Regression.png "Quadratic Regression")
+![Quadratic Regression](https://github.com/Jozdien/Basics-of-AI/blob/master/Week%20I/Pictures/Quadratic_Regression.png "Quadratic Regression")
 
 As you can see, here we have a curvy graph that's more flexible than a straight line, but doesn't try to be a perfect fit.  Thus, we have a predicted value of Y that's closer to the actual value than we did before.
 
@@ -58,7 +58,7 @@ Look at these two pictures.  One contains just one section of solid colour, and 
 
 Picture1                   |  Picture 2
 :-------------------------:|:-------------------------:
-![Black](https://github.com/Jozdien/Basics-of-AI/blob/master/Part%20I/Pictures/Black.png "Black")   |  ![Line](https://github.com/Jozdien/Basics-of-AI/blob/master/Part%20I/Pictures/Line.png "Line")
+![Black](https://github.com/Jozdien/Basics-of-AI/blob/master/Week%20I/Pictures/Black.png "Black")   |  ![Line](https://github.com/Jozdien/Basics-of-AI/blob/master/Week%20I/Pictures/Line.png "Line")
 
 Now, how would you make a computer recognize that one has a line and the other doesn't?  Well, the images can be represented as:
 
