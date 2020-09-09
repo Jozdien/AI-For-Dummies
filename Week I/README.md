@@ -95,9 +95,11 @@ If we used a different set of numbers for the operation, say:
 
 Then this operation would identify *vertical* lines in an image.  Like these, deep learning algorithms have many sets of numbers to identify very basic patterns in images.
 
-This kind of operation is called a **convolution**.  In other words, a convolution is an operation done on an image to simplify it into more familiar concepts such as "horizontal line" or "circle" or the like.  
+This kind of operation is called a **convolution**, used in one of the most popular forms of deep learning, convolutional neural networks (CNNs).  In other words, a convolution is an operation done on an image to simplify it into more familiar concepts such as "horizontal line" or "circle" or the like.  
 
 Now, from these smaller matrices we get after a convolution, we can get concepts that are composed of the previous elementary concepts; such as "box" or "wheel", with a further convolution.  During the training stage, when the computer is building the model, it learns to optimize on certain parameters.  The more parameters, the more complex the data that can be understood.  
+
+Of course, not all layers reduce the amount of data there is.  Some of the middle layers actually *increase* the amount of data they receive as input, so that they be more specifically trained (because they're finding more details in the data to work on).
 
 When many convolutions like these are stacked together, a computer can, from a group of pixels, understand the presence of complicated images like a vehicle, or a person.  This cascading series of convolutions forms what's known as a neural net.
 
