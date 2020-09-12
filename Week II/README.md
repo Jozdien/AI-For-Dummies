@@ -92,6 +92,7 @@ Output:
 | 50%   |  3.000000   |   1.000000  |  373.000000 |  -37.802250 |  144.995800 |
 | 75%   |  4.000000   |   2.000000  |  628.000000 |  -37.758200 |  145.052700 |
 | max   |  8.000000   |   8.000000  | 37000.00000 |  -37.457090 |  145.526350 |
+
 The max landsize is pretty big compared to the rest, but seeing as that's the only problem, we can let it slide.
 
 `.head()` is another function that's used to visualize the data, and this one returns the first five rows of the data, to see if there are any immediate anomalies that pop up.
