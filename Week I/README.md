@@ -97,7 +97,7 @@ Then this operation would identify *vertical* lines in an image.  Like these, de
 
 This kind of operation is called a **convolution**, used in one of the most popular forms of deep learning, convolutional neural networks (CNNs).  In other words, a convolution is an operation done on an image to simplify it into more familiar concepts such as "horizontal line" or "circle" or the like.  
 
-Now, from these smaller matrices we get after a convolution, we can get concepts that are composed of the previous elementary concepts; such as "box" or "wheel", with a further convolution.  During the training stage, when the computer is building the model, it learns to optimize on certain parameters.  The more parameters, the more complex the data that can be understood.  
+Now, from these smaller matrices we get after a convolution, we can get concepts that are composed of the previous elementary concepts; such as "box" or "wheel", with a further convolution.  These inner convolutions are what we call **hidden layers**, because they're hidden between the input pixels, and the output we see (and middle layers just doesn't sound as cool).  During the training stage, when the computer is building the model, it learns to optimize on certain parameters.  The more parameters, the more complex the data that can be understood.  
 
 Of course, not all layers reduce the amount of data there is.  Some of the middle layers actually *increase* the amount of data they receive as input, so that they be more specifically trained (because they're finding more details in the data to work on).
 
