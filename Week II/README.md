@@ -260,6 +260,6 @@ Output:
 ![Picture of Cat.  Nah, I'm kidding, it's a Dog.](https://imgur.com/l4bRc5r.png)
 ![Prediction 4](https://imgur.com/y1qjHUJ.png)
 
-The probability of each breed is given by the number after the name in each set.
+The probability of a picture being each breed is given by the number after the name in each set.
 
 Now, it's time to [try something different](https://www.kaggle.comexercise-transfer-learning), with transfer learning.
