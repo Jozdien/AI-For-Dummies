@@ -250,6 +250,7 @@ for i, img_path in enumerate(img_paths):
     print(most_likely_labels[i])
 ```
 Output:
+
 ![Picture of Dog](https://imgur.com/RZ3sy85.png)
 ![Prediction 1](https://imgur.com/Tfrss0q.png)
 ![Another Picture of Dog](https://imgur.com/ppAKn1l.png)
