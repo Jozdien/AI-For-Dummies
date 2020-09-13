@@ -166,7 +166,7 @@ To understood what that would look like, here's a graphic:
 
 Now, we go further and apply more convolutions to this 3-D tensor, to get another tensor with even more specific details.  Just as we use the patterns in the darkness to find lines in the first tensor, we use patterns in those lines, to find new shapes, and then keep going (which is how we can go from finding concentric circles, to wheels).  These patterns are more complicated than groups of four pixels and finding a line, and like how you'd need both a horizontal line and a vertical line to form a rectangle, but there's a chance it could also be a right triangle, the model assigns probabilities to each neuron depending on the neurons in the layer before it.  
 
-This relationship is given by the lines connecting the different layers, as seen below.  These lines are called **weights** in a neural network - the lines deciding how important a neuron is to each neuron in the next layer.  If a neuron in one layer activates with a high probability score (say, a neuron that detects a circle), then every neuron in the next layer receives that information through the weights.  To a neuron in the next layer that detects a wheel, that weight would be very high, and now *it* would activate with a high score (obviously, there are more factors involving other neurons, but this is a simple example).
+This relationship is given by the lines connecting the different layers, as seen below.  These lines are called **weights** in a neural network - the lines deciding how important a neuron is to each neuron in the next layer.  If a neuron in one layer activates with a high probability score (say, a neuron that detects a circle), then every neuron in the next layer receives that information through the weights.  To a neuron in the next layer that detects a wheel, that weight would be very high, and now *it* would activate with a high score (obviously, there are more factors involving other neurons, but this is a simple example).  The weights are what make up the convolutional filters, and is what the model trains for.
 
 ![How a Deep Neural Network Sees](https://imgur.com/vJAsvJO.png)
 
@@ -184,7 +184,7 @@ In transfer learning, the last few layers contain very high-level information su
 
 Now all we need to do is train the last section of weights.  After these weights are trained, then like with the rest, the activations of the neurons in the second last layer will give scores to the rural and urban neurons.  When we allow every neuron in the second last layer to influence the prediction layer (like we do here) we call the last layer a **dense layer**.  The scores are then converted into probabilities by a process called softmaxing (it's actually pretty simple, but putting it here would make it look more complicated, so just look it up.  Or don't.  Do as you will).
 
-For now, we'll run through the code for simply using a pre-trained model to classify breeds of dogs.  We're using the ResNet-50 model, which has 50 layers (kinda obvious, given the name, isn't it?)
+For now, we'll run through the code for simply using a pre-trained model to classify breeds of dogs.  We're using the ResNet-50 model, which was made at one of those competitions, and which has 50 layers (kinda obvious, given the name, isn't it?)
 
 ## A Deep Learning Program
 
@@ -270,4 +270,4 @@ Output:
 
 The probability of a picture being each breed is given by the number after the name in each set.
 
-Now, it's time to [try something different](https://www.kaggle.com/jozdien/ai-for-dummies-week-ii-guided-transfer-learning/edit), with transfer learning.
+Now, it's time to [try something different](https://www.kaggle.com/jozdien/ai-for-dummies-week-ii-guided-transfer-learning/edit), with transfer learning.  You'll need to register a Kaggle account if you don't have one, and **then** click on the 'Copy and Edit' button on the top right of the page linked above.  If you're not redirected to the code yet, click again on the same button, which should now say 'Edit My Copy'.
