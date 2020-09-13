@@ -182,7 +182,7 @@ In transfer learning, the last few layers contain very high-level information su
 
 ![Final Layer Training](https://imgur.com/z1egA4U.png)
 
-Now all we need to do is train the last section of weights.  After these weights are trained, then like with the rest, the activations of the neurons in the second last layer will give scores to the rural and urban neurons.  These scores are then converted into probabilities by a process called softmaxing (it's actually pretty simple, but putting it here would make it look more complicated, so just look it up.  Or don't.  Do as you will).
+Now all we need to do is train the last section of weights.  After these weights are trained, then like with the rest, the activations of the neurons in the second last layer will give scores to the rural and urban neurons.  When we allow every neuron in the second last layer to influence the prediction layer (like we do here) we call the last layer a **dense layer**.  The scores are then converted into probabilities by a process called softmaxing (it's actually pretty simple, but putting it here would make it look more complicated, so just look it up.  Or don't.  Do as you will).
 
 For now, we'll run through the code for simply using a pre-trained model to classify breeds of dogs.  We're using the ResNet-50 model, which has 50 layers (kinda obvious, given the name, isn't it?)
 
