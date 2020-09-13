@@ -3,11 +3,11 @@
 #### List of Contents
 [A Basic Machine Learning Algorithm](#a-basic-machine-learning-algorithm)
 
-[Machine Learning Program](#machine-learning-program)
+[A Machine Learning Program](#machine-learning-program)
 
 [More about Deep Learning](#more-about-deep-learning)
 
-[Deep Learning Program](#deep-learning-program)
+[A Deep Learning Program](#deep-learning-program)
 
 
 ## A Basic Machine Learning Algorithm
@@ -36,7 +36,7 @@ Now this tree is a little more helpful.
 
 As we have an increasing amount of data and features to examine, we can continually create more and more accurate predictions about the house's value.  More advanced models combine multiple random trees to create a better approximation of the data (groups of trees are what we call forests, and this method is called Random Forests Regression, which we'll look at next time).
 
-## Machine Learning Program
+## A Machine Learning Program
 
 At the end of this, there's a link to a site where you can actually run a machine learning program by yourself, and see what you get.  What follows this is just a guide to help you understand what you'll be running.
 
@@ -178,7 +178,7 @@ But these models are trained to identify a certain kind of object.  How would a 
 
 For now, we'll run through the code for simply using a pre-trained model to classify breeds of dogs.  We're using the ResNet-50 model, which has 50 layers (kinda obvious, given the name, isn't it?)
 
-## Deep Learning Program
+## A Deep Learning Program
 
 The os library in Python is used to handle some things that the operating system has control over, such as file and folder names.  Here, we import the join function to create a list of paths to images.
 
@@ -201,7 +201,7 @@ TensorFlow, much like sci-kit learn, is a library that's used for many machine l
 
 The `load_img` function loads the image from the file path given.  The `img_to_array` function creates the 3-D tensor for each image (we're dealing with colour images), and stores them in an array, creating a 4-D tensor (the extra dimension being the number of images, here four).  The `preprocess_input` function is used to normalize the pixel values of image to be between -1 and 1, for easy handling (and consistency, because that's how the model was first built).
 
-As the model was trained with 224*224 resolution images, we'll be using the same resolution here.
+As the model was trained with 224\*224 resolution images, we'll be using the same resolution here.
 
 Now we write a function `read_and_prep_images` to load the images, convert them into 3-D tensors, and normalize their values.
 
