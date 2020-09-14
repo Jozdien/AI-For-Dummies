@@ -3,11 +3,11 @@
 #### List of Contents
 [A Basic Machine Learning Algorithm](#a-basic-machine-learning-algorithm)
 
-[A Machine Learning Program](#machine-learning-program)
+[A Machine Learning Program](#a-machine-learning-program)
 
 [More about Deep Learning](#more-about-deep-learning)
 
-[A Deep Learning Program](#deep-learning-program)
+[A Deep Learning Program](#a-deep-learning-program)
 
 
 ## A Basic Machine Learning Algorithm
