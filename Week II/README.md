@@ -14,7 +14,7 @@
 
 Let's look at a very basic machine learning algorithm: Decision trees.
 
-Imagine you finish this workshop, and go on to become a data scientist.  A friend who works in real estate asks you for your help in estimating the price a house would sell for.  You ask him how he normally does it, and he calls it intuition.  You ask a little more, and he tells you that there are certain obvious factors that factor into a house's value - more rooms means higher value, etc.  
+Imagine you finish this workshop, and go on to become a data scientist.  A friend who works in real estate asks you for your help in estimating the price a house would sell for (because he's claustrophic and hates smaller houses, clouding his judgement in valuing them properly).  You ask him how he normally does it, and he calls it intuition.  You ask a little more, and he tells you that there are certain obvious factors that factor into a house's value - more rooms means higher value, etc.  
 
 That's kind of reasoning is what we use in decision trees.
 
