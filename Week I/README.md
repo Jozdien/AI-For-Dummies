@@ -69,7 +69,7 @@ Now, how would you make a computer recognize that one has a line and the other d
 
 Where 1 stands for a black pixel, and 0 for a white pixel.  
 
-**Warning:  Math ahead, but it's pretty easy**
+**Warning:  Warning: There is math ahead, but it's not complicated.  If it was, I probably wouldn't have bothered with it either.**
 
 Now take this new set of numbers:
 
