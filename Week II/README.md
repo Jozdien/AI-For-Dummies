@@ -271,3 +271,8 @@ Output:
 The probability of a picture being each breed is given by the number after the name in each set.
 
 Now, it's time to [try something different](https://www.kaggle.com/jozdien/ai-for-dummies-week-ii-guided-transfer-learning/edit), with transfer learning.  You'll need to register a Kaggle account if you don't have one, and **then** click on the 'Copy and Edit' button on the top right of the page linked above.  If you're not redirected to the code yet, click again on the same button, which should now say 'Edit My Copy'.
+
+
+## A Little More
+
+If you want to learn more about these ideas - and more sophisticated programming - I suggest [Kaggle's courses](https://www.kaggle.com/learn/overview) - what you've seen so far would cover the Intro to Machine Learning and the first half of the Deep Learning courses.
