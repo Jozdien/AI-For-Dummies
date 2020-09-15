@@ -36,18 +36,13 @@ Imagine a random curve on a graph.  We want to find the lowest y co-ordinate tha
 But if you take the *double* derivative, you get how the *slope* is about to change.  And at the lowest point on the graph, the slope briefly becomes 0 (at the very lowest point, when y doesn't change at all - imagine the top of an egg, where there's a very small area of flatness).  Before the curve reaches that lowest point, the slope is negative (it is going down, after all - the y co-ordinate is decreasing), and after that point, the slope is positive (the y co-ordinate will increase after the lowest point), so the double derivative (i.e, how the slope is changing) is positive.
 
 So if we want to easily (from a mathematical sense, a couple of equations are easier than looking at every possible curve) calculate the lowest possible residuals, we need some way to take a double derivative of the residuals.  That's why we use the *residual sum of squares* (RSS), which is calculated as:
-$$RSS = e_1^2 + e_2^2 + ... + e_n^2$$ Now, we can simply try to find the minimum value of this RSS.  If we do all the complicated mathematics of taking the derivative as 0 and double derivative as positive, we find that we get a straightforward equation for what β<sub>0</sub> and β<sub>1</sub> should be to get the smallest RSS (or in other words, the lowest errors):
-$$β_1 = $$
-$$β_0 = ȳ - β_1x̄$$
+$$RSS = e_1^2 + e_2^2 + ... + e_n^2$$ Now, we can simply try to find the minimum value of this RSS.  If we do all the complicated mathematics of taking the derivative as 0 and double derivative as positive, we find that we get easily computable equations for what β<sub>0</sub> and β<sub>1</sub> should be to get the smallest RSS (or in other words, the lowest errors).  These equations don't give you any insight like the others (and none of these equations are stuff you'll need to memorize completely), so if you're averse to math that looks complicated, just read ahead normally.  If you're really curious about the equations, click below to reveal it.
 
 <details>
-<summary>Click to expand!</summary>
+<summary>The equations for β<sub>0</sub> and β<sub>1</sub></summary>
 
-## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
+$$β_1 = \dfrac{\sum_{i = 1}^{n}(x_i - x̄)(y_i - ȳ)}{\sum_{i = 1}^{n}(x_i - x̄)^2}$$ $$β_0 = ȳ - β_1x̄$$
+where ȳ and x̄ are the mean values for x and y:$$ȳ = \dfrac{1}{n}\sum_{i = 1}^{n}y_i, \;\;\; x̄ = \dfrac{1}{n}\sum_{i = 1}^{n}x_i$$
 </details>
 
 This idea, as it happens, is how we optimize most AI models - by finding mathematically, the lowest point on some inaccuracy measure graph.
