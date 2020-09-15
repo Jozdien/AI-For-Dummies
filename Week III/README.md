@@ -38,14 +38,13 @@ But if you take the *double* derivative, you get how the *slope* is about to cha
 So if we want to easily (from a mathematical sense, a couple of equations are easier than looking at every possible curve) calculate the lowest possible residuals, we need some way to take a double derivative of the residuals.  That's why we use the *residual sum of squares* (RSS), which is calculated as:
 $$RSS = e_1^2 + e_2^2 + ... + e_n^2$$ Now, we can simply try to find the minimum value of this RSS.  If we do all the complicated mathematics of taking the derivative as 0 and double derivative as positive, we find that we get easily computable equations for what β<sub>0</sub> and β<sub>1</sub> should be to get the smallest RSS (or in other words, the lowest errors).  These equations don't give you any insight like the others (and none of these equations are stuff you'll need to memorize completely), so if you're averse to math that looks complicated, just read ahead normally.  If you're really curious about the equations, click below to reveal it.
 
-<details>
-<summary>The equations for β<sub>0</sub> and β<sub>1</sub></summary>
-<p>
-
 $$β_1 = \dfrac{\sum_{i = 1}^{n}(x_i - x̄)(y_i - ȳ)}{\sum_{i = 1}^{n}(x_i - x̄)^2}$$ $$β_0 = ȳ - β_1x̄$$
 where ȳ and x̄ are the mean values for x and y:$$ȳ = \dfrac{1}{n}\sum_{i = 1}^{n}y_i, \;\;\; x̄ = \dfrac{1}{n}\sum_{i = 1}^{n}x_i$$
 
-</p>
+<details>
+<summary>The equations for β<sub>0</sub> and β<sub>1</sub></summary>
+
+
 </details>
 
 This idea, as it happens, is how we optimize most AI models - by finding mathematically, the lowest point on some inaccuracy measure graph.
