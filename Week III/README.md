@@ -14,12 +14,12 @@ To begin with, we'll look back at something we already discussed - linear regres
 
 Suppose we have a variable Y (say, the sales received by a company after advertising) that we want to predict using a variable X (the money the company spent on TV advertisements).  We can model the relationship between the two as:
 
-<div style="text-align:center"><img src="https://imgur.com/tpTnfpe.png" /></div>
 
-![Equation](https://imgur.com/tpTnfpe.png) 
+![Equation](https://imgur.com/2BIHwK9.png) 
+
 or
-![](https://imgur.com/PPF9leY.png)
-$$Sales ≈ β_0 + β_1 \times TV$$  or $$Y ≈ β_0 + β_1X$$
+
+![](https://imgur.com/Th8NNqp.png)
 
 β<sub>0</sub> and β<sub>1</sub> are the *intercept* and the *slope* respectively, and combined are the *co-efficients* or *parameters* of this model.  We use the training data to create estimates of these values (hence why we don't use the normal '=' sign), and then we can use them to predict company sales for potential spending on advertisements.  You can see how that might be useful.
 
