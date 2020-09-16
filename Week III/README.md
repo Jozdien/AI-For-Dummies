@@ -3,8 +3,11 @@
 
 ### List of Contents
 [Linear Regression](#linear-regression)
+
 [Logistic Regression](#logistic-regression)
+
 [Random Forests Regression](#random-forests-regression)
+
 [Estimating Accuracy](#estimating-accuracy)
 
 ## Linear Regression
