@@ -15,7 +15,7 @@ To begin with, we'll look back at something we already discussed - linear regres
 Suppose we have a variable Y (say, the sales received by a company after advertising) that we want to predict using a variable X (the money the company spent on TV advertisements).  We can model the relationship between the two as:
 
 
-![Equation](https://imgur.com/GirdlGD.png) 
+![Equation](https://imgur.com/tyAD01S.png) 
 
 or
 
