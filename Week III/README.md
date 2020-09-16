@@ -4,9 +4,8 @@
 ### List of Contents
 [Linear Regression](#linear-regression)
 [Logistic Regression](#logistic-regression)
-[Estimating Accuracy](#estimating-accuracy)
 [Random Forests Regression](#random-forests-regression)
-[K-means clustering](#k-means-clustering)
+[Estimating Accuracy](#estimating-accuracy)
 
 ## Linear Regression
 
@@ -21,9 +20,9 @@ or
 
 ![Equation 2](https://imgur.com/Yvsqv4q.png)
 
-β<sub>0</sub> and β<sub>1</sub> are the *intercept* and the *slope* respectively, and combined are the *co-efficients* or *parameters* of this model.  We use the training data to create estimates of these values (hence why we don't use the normal '=' sign), and then we can use them to predict company sales for potential spending on advertisements.  You can see how that might be useful.
+β<sub>0</sub> and β<sub>1</sub> are the *intercept* and the *slope* respectively, and combined are the *co-efficients* or **parameters** of this model.  We use the training data to create estimates of these values (hence why we don't use the normal '=' sign), and then we can use them to predict company sales for potential spending on advertisements.  You can see how that might be useful.
 
-This process of finding the strength of the relationship between variables is what we call *regression*.
+This process of finding the strength of the relationship between variables is what we call **regression**.
 
 #### Estimating the co-efficients
 
@@ -43,7 +42,7 @@ Imagine a random curve on a graph.  We want to find the lowest y co-ordinate tha
 
 But if you take the *double* derivative, you get how the *slope* is about to change.  And at the lowest point on the graph, the slope briefly becomes 0 (at the very lowest point, when y doesn't change at all - imagine the top of an egg, where there's a very small area of flatness).  Before the curve reaches that lowest point, the slope is negative (it is going down, after all - the y co-ordinate is decreasing), and after that point, the slope is positive (the y co-ordinate will increase after the lowest point), so the double derivative (i.e, how the slope is changing) is positive.
 
-So if we want to easily (from a mathematical sense, a couple of equations are easier than looking at every possible curve) calculate the lowest possible residuals, we need some way to take a double derivative of the residuals.  That's why we use the *residual sum of squares* (RSS), which is calculated as:
+So if we want to easily (from a mathematical sense, a couple of equations are easier than looking at every possible curve) calculate the lowest possible residuals, we need some way to take a double derivative of the residuals.  That's why we use the **residual sum of squares** (RSS), which is calculated as:
 
 ![Equation 4](https://imgur.com/qbksy6a.png)
 
@@ -65,3 +64,101 @@ And as a bonus, this is what the graph for that would look like.  The red dot is
 </details>
 
 This method, as it happens, is how optimization for most AI models are performed - mathematically finding the lowest point on a graph measuring inaccuracy.
+
+If you want to try out the code for this method yourself (or just see what the program looks like), [here's a colab link](https://colab.research.google.com/drive/1fH9kVh-L0gXHEjOoNYdMu4bCoU1Hk3xF?usp=sharing) (disclaimer: I'm not the author, so it's not written explicitly with the flow).
+
+### Multiple Linear Regression
+
+Maybe you're a large company.  You have the budget to spend on more than TV advertisements.  Maybe you advertise in the newspaper and on billboards as well.  How would you then find out the optimal amount to spend? 
+
+![Equation 7](https://imgur.com/SkiYxm2.png)
+
+Here, β<sub>i</sub> stands for the relationship between X<sub>i</sub> and Y, independent of all other variables.  In other words, β<sub>i</sub> is the change in Y for one unit of change in X<sub>i</sub>, everything else remaining the same.
+
+Now I'll tell you something weird that happens, and you try and see if you can predict why it happens.
+
+Remember when we plotted a graph with a lot of data points for the simple linear regression between sales and money spent on TV advertisements?  Well, the graph looks good, doesn't it?  Clearly shows that if you spend money on TV, you make money.
+
+But now when we try it with this model, we find that somehow, β<sub>1</sub> is close to 0; or more simply, sales does not change when we spend more on TV advertising.  Can you guess why?
+
+<details>
+<summary>The answer</summary>
+
+Well, it turns out that whenever your marketing team spends more money on TV, they also spend more on newspapers and billboards.  In the simple linear regression, you aren't just calculating how much sales will increase when TV advertising increases - you're calculating how much sales will increase when every situation where TV advertising *could* increase occurs.  Now, in the multiple linear regression, where you take the change in the TV spending while newspaper and billboard budgets remain the same, you see that it's not very relevant at all.
+</details>
+
+The fundamental principle at work here, is that **correlation is not the same as causation**.  It can be though, and your intuition can't always be trusted, so your best bet is usually to test and experiment with other variables - the truth is often counter-intuitive.  
+
+But fortunately, when you run a regression of car accidents and KFC sales, you would find a positive relationship, similar to that between TV and sales.  The real reason is simply that on days when there are more people outside, there are more road accidents, and KFC has more customers.  The fortunate aspect is that sometimes, in rare instances, its obvious enough that no one's tried to ban KFC to reduce accidents.  Well, no one yet.
+
+## Logistic Regression
+
+Let's say you're a doctor.  A patient is wheeled into the emergency room after collapsing, and you need to find out whether they've had a stroke, an epileptic seizure, or a drug overdose.  There are a lot of factors that could go into predicting it (many X<sub>i</sub>), but that's not the focus here.  The equation would look something like:
+
+![Equation 9](https://imgur.com/0AO7Are.png)
+
+You could figure that if the predicted answer is the one that Y is calculated closest to - if it was 1.4, it would be a stroke, for example.  But the problem is that if you let Y be, say:
+
+![Equation 10](https://imgur.com/cQg8ftO.png)
+
+Then the values for the parameters would be entirely different.  This becomes a problem as we get different predicted values on test data from pointless things like this.
+
+That isn't a problem when you only have two variables.  Then it would look like:
+
+![Equation 8](https://imgur.com/V1AAjWl.png)
+
+So we could say that it's a stroke if Y is less than 0.5, and a drug overdose if it's greater than.  In other words, we could treat it as the probability of a drug overdose.
+
+But what if Y goes above 1?  Or below 0?  The *factors* (X<sub>i</sub>) aren't bound by limits in real life, so in some extreme scenarios, it's possible that the equation for Y in terms of the X<sub>i</sub>s gives us values that probabilities wouldn't have, kinda ruining the analogy.  It provides a crude prediction, but crude isn't what we're going for.
+
+Turns out there are a lot of functions that can give outputs between 0 and 1 for all inputs.  In logistic regression, we rather predictably use the logistic function to model *p(X)*, the probability that Y is one of the two possibilities given a certain value of X (we'll look at the scenario where there's only one factor first).
+
+![Equation 9](https://imgur.com/Y9j8ogz.png)
+
+There's no reason we chose this equation other than to get that output range, so it's not necessary to think about the mathematics behind this.  
+
+To compare, consider the scenario where you want the probability that a person would default on their loan, with the parameter being the balance in their account.  It would look something like the following graph (the orange marks are the balances for which someone defaulted), where the left is linear regression, and the right logistic regression.
+
+![Linear-Logistic Graphs](https://imgur.com/xTbei72.png)
+
+The right one does look more accurate to the data, doesn't it?
+
+If you do a couple interesting things to that logistic function equation, you get this:
+
+![Equation 10](https://imgur.com/HryhE8b.png)
+
+That value on the left is called the *odds*, and it's what's used in traditional betting.  Like when people say the odds of something are 9 to 1, they mean the probability is 0.9, which gives a value of 9 on the left hand side.  Just an interesting tidbit, you can move on now.
+
+By taking the logarithm on both sides (because why not, honestly), we get:
+
+![Equation 11](https://imgur.com/AYtATIu.png)
+
+Now, the value on the left is what we call the log-odds.  Surprisingly, you don't see many traditional gamblers use this term, for (math) whatever (it's the math) reason (It's because of math).
+
+Now, the terms on the right are the same old linear equation from before.  And with two parameters, just like before.  To find that, there's something called a **likelihood function** which is basically just finding the values for the parameters for which the value of *p(X)* (not the left hand side of the last equation, but the probability of default) is closest to 1 for actual defaulters in the training data and closest to 0 for non-defaulters.  Simple, isn't it?  The math isn't as much, and if you're still interested in that at this point, you can find it with a fairly simple Google search (I think for the rest, there are more than enough equations here).
+
+If there are more factors, we can simply substitute them into the equation, and we get:
+
+![Equation 12](https://imgur.com/TcIRmEB.png)
+
+Lastly, what if we have more than two options?  What if instead of dealing with a scenario where a person can default or not, we're looking at the same old scenario of a collapsed patient in a hospital?  The models we looked at just now can be applied to more classes, but they're not used that often in that form.  That's partly due to the existence of better methods, such as *discriminant analysis*.  
+
+### Linear Discriminant Analysis
+
+Including the formal theory for that here as well would make this longer than it already is, so I'll just explain it intuitively.
+
+First, why is this better (apart from the ability to handle multiple classes)?  
+
+Well, when the classes are very separated, logistic regression isn't as strong, as the parameters become very unstable - like if in the defaulters scenario, there was a stronger divide between the defaulters and non-defaulters - the graph would at some point take a sudden, sharp turn upward, instead of a slow gradient at the point where the orange ticks faded from the default line.  The parameters go to negative infinity and infinity respectively, to fit that curve, which you might realize is not a realistic relationship between the variable and the output.
+
+If the size of the training data is small, this method performs better.
+
+Now, what does this model do?  Well, it first models the distribution of X in each output class.  If we consider the patient scenario again, it's like finding the probability distribution of his age (let that be a factor) if he had a stroke (which would be a graph that probably leans toward the older side) as well as for the other possibilities, repeated for all the factors.  Basically, we find all *P(X)* s given *Y* = a specific class *k*.  (It can be hard to picture this.  Take a second here.)
+
+Now we use [Bayes' theorem](https://arbital.com/p/bayes_rule/?l=1zq) to flip these to get *P(Y = k)*, the probability distribution for *Y* being a specific class *k*, for all values of *X*.  Now we have a distribution that tells us what the probabilities are for the cause of the patient's condition, given the values of the variables.  (If you don't remember what Bayes' theorem is - or even if you do, I highly recommend checking out that link, which is a site that explains mathematical concepts in a very intuitive, easy way.)
+
+## Random Forests Regression
+
+
+
+## Estimating Accuracy
