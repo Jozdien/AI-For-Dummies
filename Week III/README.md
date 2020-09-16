@@ -52,12 +52,16 @@ Now, we can simply try to find the minimum value of this RSS.  If we do all the 
 <details>
 <summary>The equations for β<sub>0</sub> and β<sub>1</sub></summary>
 
-![Equation 5](https://imgur.com/1vFul5V.png)
+![Equation 5](https://imgur.com/5IhQ9ky.png)
 
 where ȳ and x̄ are the mean values for x and y:
 
 ![Equation 6](https://imgur.com/k3L787k.png)
 
+And as a bonus, this is what the graph for that would look like.  The red dot is the lowest point in that graph and thus, the lowest value of RSS, and β<sub>0</sub> and β<sub>1</sub> are simply the x and y co-ordinates of that point.
+
+![RSS Graph](https://imgur.com/YHYzPTM.png)
+
 </details>
 
-This idea, as it happens, is how we optimize most AI models - by finding mathematically, the lowest point on some inaccuracy measure graph.
+This method, as it happens, is how optimization for most AI models are performed - mathematically finding the lowest point on a graph measuring inaccuracy.
