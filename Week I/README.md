@@ -30,7 +30,7 @@ That's Machine Learning.  No seriously, that's the basic idea.  You give the com
 
 ### So when does it get more complicated?
 
-Well, you might have noticed that the predicted value of Y isn't **exactly** the same as the actual value.  Now, because people are picky as hell, they want more accuracy.  So we end up with patterns like:
+Well, you might have noticed that the predicted value of Y isn't *exactly* the same as the actual value.  Now, because people are picky as hell, they want more accuracy.  So we end up with patterns like:
 
 ![Exact Fit](https://github.com/Jozdien/Basics-of-AI/blob/master/Week%20I/Pictures/Exact_Fit.png "Exact Fit")
 

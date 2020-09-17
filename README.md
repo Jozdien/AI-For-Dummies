@@ -10,3 +10,5 @@ This part is mainly meant to give you a brief look into what the programming sid
 This part is meant to give you a theoretical base to accustom you to the type of mathematical thinking AI deals with.
 * **Part IV** comes back to AI alignment, and dives further into some of the core ideas and thinking behind it, as well as the nature of intelligence.  
 This part is meant to give you more than a basic idea of the state of Friendly AI research, and give you a stepping-off point to understand what AI *is*, beyond a few opaque theorems and lines of code.
+
+You shouldn't try to memorize any of the things you read here.  In fact, I'd recommend against it; it'll only make it more of a drudgery and make it lose the quality it does have.  The only thing that matters is understanding what it means, where it all comes from - if you had this or similar material with you, you should be able to explain it to someone else.

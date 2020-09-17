@@ -1,13 +1,10 @@
-
 # The Third Part - Algorithms
 
 ### List of Contents
 [Linear Regression](#linear-regression)
-
 [Logistic Regression](#logistic-regression)
-
 [Random Forests Regression](#random-forests-regression)
-
+[Choosing Models](#choosing-models)
 [Estimating Accuracy](#estimating-accuracy)
 
 ## Linear Regression
@@ -162,6 +159,43 @@ Now we use [Bayes' theorem](https://arbital.com/p/bayes_rule/?l=1zq) to flip the
 
 ## Random Forests Regression
 
+How do trees work?  When we last saw one (all the way back in Part II), it reduced the entire extent of the output into two neat values, depending on one variable.
 
+Roughly speaking, building any tree involves two mathematical steps. :
+
+* Dividing the set of possible values for the parameters into *n* different regions (If there's only variable, it'll be *n* lines, if there are two, it'll be planes, if there are three, it'll be boxes, and so on).
+* For any new observation, we simply find the region it falls into, and assign it an output value equal to the average of the training data in that region.
+
+Now, we will obviously want to construct the regions in a way that minimizes the RSS as much as we can.  But how do we do that?  We can't exactly look at every possible set of regions to see which is the best.  Well, we can, but it'd be a lot of work, and wouldn't it be nicer if we could find an easier way?
+
+There's a method known as **recursive binary splitting**.  It's *top-down*, which means we begin at the top of the tree and then keep splitting each region into two smaller ones; each split leaves behind two new branches.  It's *greedy* (yes, it's actually called that), which means that at each step, it finds the best possible split at that particular step, instead of looking ahead to see what would be better in the future.  Rather short-sighted and selfish.
+
+So at every step, we find a variable *s* for every parameter, such that the division into the regions where *X<sub>i</sub>* > *s* and *X<sub>i</sub>* < *s* for all *X<sub>i</sub>* (*s* is obviously different for each) gives us the greatest reduction in RSS.  In other words (or rather, equations), we want the combined RSS for the two new regions to be as low as possible.  This process takes way less time than coming up with random divisions of the regions.
+
+Of course, if we keep dividing into regions while looking for the lowest RSS, we'll end up with a very overfitted tree.  A smaller tree might have more bias, but it'll also have far less variance (Look at Part II if you don't remember what that means).  We can't even set a condition that the decrease in RSS has to be greater than a certain value at each split, because a low-quality split may be followed by a much better one.
+
+A better strategy may be to grow a tree to a large size, and then cut it down to a more manageable size.  For this, we use a method known as **cost complexity pruning** or **weakest link pruning**.  The logic is, instead of simply trying to reduce the RSS, we try to reduce the sum of the RSS and some term that increases with the size of the tree.  Makes sense, doesn't it?  The larger the tree, the larger that term will become, so when we're cutting down the size, we just need to look for a subtree for which that sum is the smallest.  
+
+The term we use here is *α|T|*, where *|T|* is the number of leaf or terminal nodes on the tree (the nodes that have no further branches sticking out of it), and *α* is a tuning variable we can adjust as necessary.  If we want a smaller tree, we give *α* a large value, and if we want a larger tree, we give *α* a smaller value.  If *α* was 0, then the subtree with the smallest RSS would simply be the tree itself, and we can't cut anything down, which isn't fun.  We can now find the ideal value for *α* using some method of estimating accuracy (which we'll see next), because the cutting down of the tree progresses rather predictably for increasing values of *α*, and thus getting a sequence of subtrees as a function of it is possible.
+
+### Random Forests
+
+What if one tree wasn't enough?  What if you wanted to go *really* overboard with it, and make a *lot* of trees?  After all, if one tree is good, averaging a lot of them can only be better.
+
+Now how do we make these different trees?  One method, known as **bagging**, involves selecting *n* random points from the *n* different *(X,Y)* pairs, with repetition allowed so the selections aren't the same.  This decreases variance, as specific quirks are accounted for in the averaging of different types of trees (of course, some quirks exist throughout the entire training data, and there this won't help), without increasing bias as we're not retraining a tree on the same dataset.
+
+But this comes with its own problems.  Namely, if there's one or two *very* strong predictors in the model along with a few moderately strong ones, then when we use bagging, nearly all the trees formed will use those strong predictors, and subsequently, those trees would look very similar, meaning that variance doesn't increase all that much.  This problem comes mostly because we're always selecting *n* points, because then it's more likely that they would contain that strong predictor.
+
+So to solve this, we could simply take a subset of the predictors.  Instead of selecting *n* random points, we could select a smaller number *m*, and train trees with that number.  Because we're using a lot of trees, we don't lose power from the smaller training data per tree.
+
+This process is called **random forests regression**.  Lots of trees, and its random, so the name makes sense.  The value for *m* is typically taken as *√n*.
+
+## Choosing Models
+
+If the relationship between the predictors (factors) and the output is linear, you use linear regression.  If the relationship is non-linear and more quadratic, logistic regression works well.  If it's very non-linear and complex, trees might be a better option.  
+
+![Linear Regression vs Trees](https://imgur.com/RB9Ps5j.png)
+
+Trees are popular for more reasons than their predictive power - they're easy to understand by looking at them, and that's always nice.  Unfortunately, they aren't quite as accurate as some of the other regression techniques, and even a small change in the training data can result in a large change in the final tree.
 
 ## Estimating Accuracy
