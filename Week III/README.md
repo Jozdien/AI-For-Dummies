@@ -204,4 +204,26 @@ As we already saw, training error rate is quite different from testing error rat
 
 The obvious solution is to split the training dataset into two parts, and use one for testing, a solution known as the **validation set approach**.  But the problem that arises is that the model's test accuracy will depend heavily on *which* data is in the first part, the part its trained on.  And since models are inclined to perform better with more training, this might be a situation where if we train it on only a part of the data, it'll actually *overestimate* the test error.
 
-What if we could get more training while also keeping our accurate tests?  That's the idea behind **Leave-one-out cross-validation** (That's a lot of words, so let's just call it LOOCV).  In it, we train the model on the entire training data, excluding just one observation, which we'll use for testing.  And since the test error (the mean square error MSE = *(y<sub>i</sub> – ŷ<sub>i</sub>)<sup>2</sup>*) here will be very variable because we're using just one observation instead of averaging over an entire testing dataset, we we repeat this for every single observation.  
+What if we could get more training while also keeping our accurate tests?  That's the idea behind **Leave-one-out cross-validation** (That's a lot of words, so let's just call it LOOCV).  In it, we train the model on the entire training data, excluding just one observation, which we'll use for testing.  And since the test error (the mean square error MSE = *(y<sub>i</sub> – ŷ<sub>i</sub>)<sup>2</sup>*) here will be very variable because we're using just one observation instead of averaging over an entire testing dataset, we repeat this for every single observation.  In other words, we retrain the model using a different observation as test data each time, until every observation has been used.  The test error could be the average of the errors from each training.  
+
+![Equation 13](https://imgur.com/n4DerGl.png)
+
+But this can be expensive, training the model so many times.
+
+What if we took a number of observations from the dataset each time, for testing?  It'd look much like the validation set approach in the first iteration, but with the added benefit of retraining so the model can fully utilize the training data.  We'd divide the entire dataset into *k* parts, and use one part for testing each time.  This is called ***k*-Fold Cross-Validation**.  LOOCV is just a special case of this where *k* = 1.
+
+![CV comparison](https://imgur.com/vWkvUe5.png)
+
+As you can see, the *k*-fold method performs almost exactly as well as LOOCV (the figures mentioned in the descriptions aren't relevant, they're just normal datasets), for far less computing expense.  
+
+But computational issues aside, it turns out that *k*-fold cross-validation more often gives accurate estimates of the true test error rate than LOOCV (This can't be seen very well in the above diagram, but it happens quite a lot).  This relates to the bias-variance tradeoff we discussed earlier.
+
+As we stated above, the validation set approach will overestimate the test error rate, while LOOCV, where every training set is *n* - 1 in length, will give a more accurate (or less biased) estimate.  So *k*-fold cross-validation would have an intermediate level of bias, and from this angle, LOOCV should be preferred to it.
+
+But it turns out that LOOCV has a higher variance than *k*-fold CV (when *k* < *n*).  This occurs because what LOOCV effectively does is average the *n* models it creates, which are all very similar, because they're trained on almost the same data.  In *k*-fold CV, the models are still somewhat similar, but less so because the models have a more varied training dataset.  The validation set approach would have even lower variance in that regard.
+
+Thus to summarize, we can say the problem is that the choice of *k* involves a bias-variance tradeoff (*k* = 1 is LOOCV, *k* = *n*/2 or the like would be the validation set approach), and so typically, one uses this method taking *k* = 5 or *k* = 10, as there is empirical proof that they yield test error estimates that suffer neither from extremely high bias or excessive variance.
+
+## Where to Go From Here
+
+In this folder, you should find a PDF of *An Introduction to Statistical Learning* by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani.  That book is one of the best introductions to pure ML theory out there, and while it may be a little opaque and mathematical at times, remember the objective is not to memorize it, but to understand it (and even if you don't get it all the first time, you'll come out with far more understanding - and more questions - than you went in with).  You can ignore the coding sections in the book, or find Python translations of it if you *really* want to (there are a number of them).
