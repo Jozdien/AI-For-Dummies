@@ -2,13 +2,9 @@
 
 ### List of Contents
 [Linear Regression](#linear-regression)
-
 [Logistic Regression](#logistic-regression)
-
 [Random Forests Regression](#random-forests-regression)
-
 [Choosing Models](#choosing-models)
-
 [Estimating Accuracy](#estimating-accuracy)
 
 ## Linear Regression
@@ -203,3 +199,9 @@ If the relationship between the predictors (factors) and the output is linear, y
 Trees are popular for more reasons than their predictive power - they're easy to understand by looking at them, and that's always nice.  Unfortunately, they aren't quite as accurate as some of the other regression techniques, and even a small change in the training data can result in a large change in the final tree.
 
 ## Estimating Accuracy
+
+As we already saw, training error rate is quite different from testing error rate.  The test error rate can be calculated if we have a dedicated testing set is available, but that's not always the case.  In that scenario, assessing a model using its training error rate can lead to overconfidence in its accuracy.  To finish off Part III, we'll look at some of the methods for estimating the test error rate by holding out on some of the training data.
+
+The obvious solution is to split the training dataset into two parts, and use one for testing, a solution known as the **validation set approach**.  But the problem that arises is that the model's test accuracy will depend heavily on *which* data is in the first part, the part its trained on.  And since models are inclined to perform better with more training, this might be a situation where if we train it on only a part of the data, it'll actually *overestimate* the test error.
+
+What if we could get more training while also keeping our accurate tests?  That's the idea behind **Leave-one-out cross-validation** (That's a lot of words, so let's just call it LOOCV).  In it, we train the model on the entire training data, excluding just one observation, which we'll use for testing.  And since the test error (the mean square error MSE = *(y<sub>i</sub> – ŷ<sub>i</sub>)<sup>2</sup>*) here will be very variable because we're using just one observation instead of averaging over an entire testing dataset, we we repeat this for every single observation.  
