@@ -2,6 +2,7 @@
 
 > By far the greatest danger of Artificial Intelligence is that people
 > conclude too early that they understand it.
+
 > \- Eliezer Yudkowsky
 
 Our bodies are shells for a small, squishy, slimy lump of gray, white, and red.  The kind of thing that if you saw on the side of the road, you'd go out of the way to avoid.  It looks like the most damage it could do to you is your own disgust.
