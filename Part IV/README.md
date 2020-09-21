@@ -1,8 +1,7 @@
 # Part the 4th - Artificial Intelligence
 
-> By far the greatest danger of Artificial Intelligence is that people
-> conclude too early that they understand it.
-
+> By far the greatest danger of Artificial Intelligence is that people conclude too early that they understand it.
+>
 > \- Eliezer Yudkowsky
 
 Our bodies are shells for a small, squishy, slimy lump of gray, white, and red.  The kind of thing that if you saw on the side of the road, you'd go out of the way to avoid.  It looks like the most damage it could do to you is your own disgust.
@@ -22,8 +21,9 @@ Intelligence is the source of technology.  What happens when we use that technol
 
 ## What's Intelligence?
 
-> AI is whatever hasn't been done yet.*
-\- Larry Tesler
+> AI is whatever hasn't been done yet.
+>
+> \- Larry Tesler
 
 *I usually leave the recommendation for further reading to the end, but in this case, it's important enough that it has to be said in the beginning: Godel Escher Bach is the greatest book ever written on the nature of intelligence, one of the greatest books *ever*, and a very entertaining read about music, art, philosophy, surrealism, literature, programming - you name it, Douglas Hofstadter's probably written about it. If you came up to me with no prior knowledge about *anything* related to AI but wanted to get into it, this is what I'd give you (well, not *give* you because I probably wouldn't trust you with my copy).*
 
@@ -37,9 +37,9 @@ The first task when we're dealing with knowing more about intelligence is the ve
 
 ## AI Alignment
 
-> The AI does not hate you, nor does it love you, but you are made out
-> of atoms which it can use for something else.
-\- Eliezer Yudkowsky
+> The AI does not hate you, nor does it love you, but you are made out of atoms which it can use for something else.
+>
+> \- Eliezer Yudkowsky
 
 ### Value Systems
 
