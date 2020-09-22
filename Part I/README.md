@@ -113,7 +113,7 @@ A relatively simple example would be Flappy Bird.  We all love that game, don't 
 
 ### In the Real World
 
-Real-world deep learning models have many, many convolutions stacked together to be able to identify things with better accuracy and efficiency.  That face recognition feature on your phone is a deep learning model, trained to recognize human faces.  The voice assistant on your phone translates your voice into text with deep learning models.  As mentioned before, GPT-3 uses deep learning with a ridiculous number of parameters to not only understand English, but also understand story, characters, writing style, and in some cases, [game strategy](https://slatestarcodex.com/2020/01/06/a-very-unlikely-chess-game/).
+Real-world deep learning models have many, many convolutions stacked together to be able to identify things with better accuracy and efficiency.  That face recognition feature on your phone is a deep learning model, trained to recognize human faces.  The voice assistant on your phone translates your voice into text with deep learning models.  As mentioned before, GPT-3 uses deep learning with a ridiculous number of parameters to not only understand English, but also understand story, characters, writing style, and in some cases, [game strategy](https://slatestarcodex.com/2020/01/06/a-very-unlikely-chess-game/).  You can also try out a deep learning model trained on scribblings over at Google's [Quickdraw](https://quickdraw.withgoogle.com/).
 
 ### Alright, so how do I actually use this stuff?
 
