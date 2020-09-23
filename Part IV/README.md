@@ -19,8 +19,10 @@ There's a quote from Eliezer Yudkowsky, one of the largest names in AI Safety (a
 > There’s a popular concept of “intelligence” as book smarts, like calculus or chess, as opposed to say social skills. So people say that “it takes more than intelligence to succeed in human society”. But social skills reside in the brain, not the kidneys. When you think of intelligence, don’t think of a college professor, think of human beings; as opposed to chimpanzees.
 
 Intelligence is the source of technology.  What happens when we use that technology to better our intelligence?  We could create better scientific theories, medicines, movies, but most of all, we could use it to take our intelligence even further.  That's a cycle with an upper limit so far away we can't see it yet, or even know if it exists.  It's a runaway intelligence explosion, better known as the Singularity.  While it's instinctive to think of the range of intelligence as stretching from a flat-earther to Einstein, it actually goes more like:
+‎
 
 ![Intelligence chart](https://imgur.com/d4aTBrR.png)
+‎
 
 When you consider this, the next few decades become quite probably the most important in human history and its future.
 
@@ -46,9 +48,25 @@ Finally, the last thing (roughly, there's a lot to be said about anthropomorphic
 
 Remember when we talked about the AI in a box idea, where we imprison the potentially dangerous AI inside a system it cannot escape?  Yeah, look at that intelligence chart above, and ask yourself how many humans would be able to convince you of something you don't want to do.  Then ask yourself how much further down the line they would have to be to be able to do it (If you're a theist, ask yourself whether your god could convince you).
 
-### 'Emergence'
+### Emergence
+
+The neurons in your brain are complex things, but with a very simple function.  A single neuron has a few synapses ('entry ports') and one axon ('output port').  It takes in multiple inputs, sums them, and if the sum is greater than a certain value (some of them can be negative) , it fires a signal (send ions) down the axon.  That's all there is to the lowest level of the mind - a simple addition function.  So where does the complicated stuff that makes up intelligence come in?
+
+There is a concept called emergence, which goes by many definitions depending on whom you ask, but a more-or-less accurate one is this:  Emergence is when small parts with simple functions combine to form larger parts with more complex functions (like those neurons combining to form you); those large parts would interact with each other in ways the smaller parts do not (like you reading this, while a neuron probably cannot read something another neuron wrote).  
+
+Most definitions for this word are accurate to an extent, but the one that describes intelligence as something more than the sum of its parts is one that's technically correct, but greatly misunderstood.  It is not that neurons combining together mysteriously creates functions that come from somewhere outside the neurons, it's simply that a random combination of neurons would not create intelligence, and the process of co-ordinating them in highly specific ways is the *more* that is given to the parts to form intelligence.
+
+Think about an AI algorithm running on a computer.  At its core, it breaks down to a lot of transistors going on and off.  Sequences of instructions in this binary language are combined to form logical gates, and then functions like add and move.  Sequences of these functions are then combined to form operations we're more familiar with, like the code that we use to write the algorithm (Python), and the various math we implement using it.  At no point in this process is there anything *more* than switches going on and off, but the way they interact allows for increasingly complex things to happen.
+
+Likewise, a very small group of neurons arranged in a specific way can handle more complexity than a single neuron, as they now have a number of internal neurons that can process the input signals between them before giving more than a single output signal (which is what a single neuron does).  These groups can then combine to form larger meta-groups, and those to form meta-meta-groups, and so on.  
+
+These groups (and meta-variants) are almost always temporary, in that they form all over the brain as necessary, and do not need a specific set of neurons to do it - any will do (neurons don't feel anger at someone taking their job).  A neuron can likewise be a part of many groups at once, which is where it becomes so complicated you might be beginning to understand why we still haven't completely understood it yet.
+
+The *self*, by that same logic, is just a very, very high-level group that's so complex it can't easily understand the different parts that form it - in the same way we wouldn't expect an ant to understand its own behaviour, despite it being simple enough that *we* understand it.  Memories, creativity, personal unique ways of thinking - these are all mind-numbingly complex groups of billions of neurons.
 
 ### Strange Loops
+
+
 
 ## AI Alignment
 
