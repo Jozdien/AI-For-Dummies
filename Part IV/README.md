@@ -1,4 +1,3 @@
-
 # Part the 4th - Artificial Intelligence
 
 > AI is whatever hasn't been done yet.

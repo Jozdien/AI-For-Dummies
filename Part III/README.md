@@ -11,6 +11,8 @@
 
 [Estimating Accuracy](#estimating-accuracy)
 
+**Warning: There is math ahead, and it can look complicated at first glance, but read it sequentially, and it'll make sense**.  Probably.
+
 ## Linear Regression
 
 To begin with, we'll look back at something we already discussed - linear regression., the simplest of machine learning algorithms.
