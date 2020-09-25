@@ -23,7 +23,7 @@ Intelligence is the source of technology.  What happens when we use that technol
 ![Intelligence chart](https://imgur.com/d4aTBrR.png)
 ‎
 
-When you consider this, the next few decades become quite probably the most important in human history and its future.
+When you consider this, the next few decades become quite probably the most important in human history and its future, and AI the last invention that humanity need make.
 
 ## What's Intelligence?
 
@@ -69,20 +69,40 @@ The *self*, by that same logic, is just a very, very high-level group that's so 
 >
 > \- Eliezer Yudkowsky
 
+[Introductory video about the problems associated with trying to control or destroy an unfriendly AI](https://www.youtube.com/watch?v=4nN8wUVZ9u0)
+
 ### Self-modifying AI
 
-So if all our skills are a product of our intelligence, and we progress our technology to the point where we create an intelligence exactly as powerful as us, then it would be as capable as we are at technology, right?  So it would be just as good as we are in designing AI systems that are more advanced than before?  And then *that* AI would be even better at creating more advanced AI, and so on, until in a very short amount of time to us, we've gone from a human-level robot friend to a minor god-level being, and it's *still* increasing.
+So if all our skills are a product of our intelligence, and we progress our technology to the point where we create an intelligence exactly as powerful as us, then it would be as capable as we are at technology, right?  So it would be just as good as we are in designing AI systems that are more advanced than before?  And then *that* AI would be even better at creating more advanced AI, and so on, until in a very short amount of time to us, we've gone from a human-level robot friend to a minor god-level being, and it's *still* increasing.  That first sort of intelligence we invent that can modify itself, is called a **seed AI**.
 
 If that scenario seems slightly concerning, consider what it would be like if we haven't properly aligned with our interests.  We can't just try to control it, because it'll blow past our wildest imaginations faster than we can do anything about it.  If we haven't come up with a way not to make the AI unable to harm us, but to not *want* to harm us (more on that in the following section), then it's lights out.  That kind of AI would be a [paperclip maximizer](https://wiki.lesswrong.com/wiki/Paperclip_maximizer), an intelligence with a very high optimization power, but without a well-calibrated sense of what we want that power to be used for.  In the example in that hyperlink, we'd end up with every resource in the known universe gradually being converted into paperclip manufacturing factories, as humanity is instantly wiped out to prevent any chance of that goal being hindered (*that's* the realistic scenario of why an AI might destroy humanity), and paperclip factories just aren't fun enough to be worth that.
 
-Sure, we could technically not have the AI self-modify, but in a world where technology is freely available and everyone's looking for a way to get ahead without care for the consequence, who's going to stop every last person from using the obvious most efficient method to improve AI?
+Sure, we could technically not have the AI self-modify, but in a world where technology is freely available and everyone's looking to get ahead without care for consequence, who's going to stop every last person from using the obvious most efficient method to improve AI?
 
 ### Value Systems
 
 We know that an AI is better than us in every way - there's no movie third act scene where we realize that machines will never understand creativity or love and that we can use that to beat it; if an AI is smarter than us, it understands *those things* better too.  So when you look at it that way, the idea of controlling an AI seems extremely difficult, right?  *Right*?
 
-Well yes.  Anything we're intelligent to come up with for an AI will be blown apart by it in a couple of hours after it reaches our level and is made to self-modify.
+Well yes.  Anything we're intelligent to come up with for an AI will be blown apart by it in a couple of hours after it reaches our level and is made to self-modify.  So the answer doesn't lie in constructing systems that the AI can't outsmart us in, it's in constructing the AI to not want to break the system.  In other words, instead of trying to control an unfriendly AI, we have to make a friendly AI.  And the way to do this, is what we call a value system.
 
-### Making the AI do all the work <AI monitoring other AI>
+Like we said earlier, intelligence is simply an optimization algorithm.  Modern research in AI mostly revolves around improving those algorithms, while the field of AI Safety deals with coming up with ways for what it's optimizing for, to be in our benefit.  The problem, after all, isn't that the AI will go against our wishes, but that it doesn't know *all* our wishes - telling it, for example, to cure cancer would result in the AI simply looking for the fastest way to do that, and enslave humanity to force-test on, because our *hidden motive* of curing cancer to save lives isn't something the AI knows about.  And if we tell the AI that too, there are still other problems that pop up from the minor differences between our values and the AI's.
 
-### Storytime - The AI in a Box Boxes You
+With the ideal value system, the AI would not only find the most efficient ways to get what we *really* want - not just the surface-level interpretation of the tasks we give it, and we can't count on programmers being good enough to express their entire values every single time (take my word on that) - but also not modify itself in a way that prevents those values from being changed, in the same way you're not going to change your own morals to become a murderer (probably). 
+
+So what would this value system look like?  Well, at its core, it would look like a number whose value (ideally) corresponds to how much we like an outcome, and the AI's motive would be to maximize that number.  I add the disclaimer 'ideally' because it's not difficult to imagine something like an AI told to fill a bucket that keeps adding more water to it even as it starts to flow out and the room starts to flood and you start to drown, because that will always increase the probability that the bucket is 'full'.  The problem is how we decide what that number represents, or more specifically, how we train the algorithm to recognize that number increasing when it does something to fulfil our true values.  Now that, is a question without a sufficiently good answer (yet).
+
+That's one of the best things about this field.  It doesn't require intense mathematical understanding or great programming skills, just new ideas on how to approach it using what you know about the problem.  There are many proposed solutions, such as training the AI to infer what the hidden motive is in a task, or training it to model a 'perfect human' to gauge its values, but those come with their own problems, both theoretical and implementational.
+
+### Storytime
+
+I think it's always easier to drive home a point when you read something slightly more evocative than a few dry paragraphs.  While there is always a risk of generalizing actual science from fiction, some stories are written with the intent to match reality, and some of the authors that write those stories are knowledgeable enough to actually do it.  In that spirit, I recommend the following stories to understand better the risks involved (They're very short, I swear.  I wouldn't make you read *too* much).
+
+[Here's one](https://www.lesswrong.com/posts/NvDQrBZW8ofkB285M/plausible-a-i-takeoff-scenario-short-story) about what a paperclip maximizer might look like (although there are some factual problems I have with the story - some of which are discussed in the comments - the point largely stands).
+
+You remember the problems we discussed with trying to contain the AI inside a box so that theoretically, even if it's not well-aligned, we can choose to implement the optimal actions it suggests?  (If you don't, check out the video I linked earlier.  It covers that topic too.)  There are many ways to understand how wrong that scenario can go, but I think it's easy to understand it in the form of stories.
+
+[Here's one take on it](https://www.reddit.com/r/rational/comments/5nty35/short_story_a_man_dies_and_is_sent_to_hell/), from Reddit user u/Sophronius.  And [this](https://www.lesswrong.com/posts/c5GHf2kMGhA4Tsj4g/the-ai-in-a-box-boxes-you) is a more directly related-to-AI version of that story (this actually came first), by Stuart Armstrong of the Future of Humanity Institute.  They're both very short, I swear.  I wouldn't make you read *too* much.
+
+## Where to Go From Here
+
+AI Safety is a relatively new field.  It's been around for just between one and two decades.  Like I mentioned earlier, this means that it currently lies in its innovation phase, where the entire field is limited only by the pure number of people coming up with ideas (as opposed to something larger, like AI, where the limitation is more technical and less related to capital).  If you want to learn more about Friendly AI, I recommend understanding more about intelligence itself (*Godel Escher Bach*), a *little* bit more in the theory of stuff like neural networks, and as much of stuff like [decision theory](https://wiki.lesswrong.com/wiki/Decision_theory) as you can get (which I promise is more fascinating than anything you've come across in this workshop - look at the [Prisoner's Dilemma](https://wiki.lesswrong.com/wiki/Prisoner%27s_dilemma) or [Newcomb's Problem](https://wiki.lesswrong.com/wiki/Newcomb%27s_problem)).
