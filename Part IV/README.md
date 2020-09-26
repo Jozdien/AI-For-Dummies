@@ -101,7 +101,7 @@ I think it's always easier to drive home a point when you read something slightl
 
 You remember the problems we discussed with trying to contain the AI inside a box so that theoretically, even if it's not well-aligned, we can choose to implement the optimal actions it suggests?  (If you don't, check out the video I linked earlier.  It covers that topic too.)  There are many ways to understand how wrong that scenario can go, but I think it's easy to understand it in the form of stories.
 
-[Here's one take on it](https://www.reddit.com/r/rational/comments/5nty35/short_story_a_man_dies_and_is_sent_to_hell/), from Reddit user u/Sophronius.  And [this](https://www.lesswrong.com/posts/c5GHf2kMGhA4Tsj4g/the-ai-in-a-box-boxes-you) is a more directly related-to-AI version of that story (this actually came first), by Stuart Armstrong of the Future of Humanity Institute.  They're both very short, I swear.  I wouldn't make you read *too* much.
+[Here's one take on it](https://www.reddit.com/r/rational/comments/5nty35/short_story_a_man_dies_and_is_sent_to_hell/), from Reddit user u/Sophronius.  And [this](https://www.lesswrong.com/posts/c5GHf2kMGhA4Tsj4g/the-ai-in-a-box-boxes-you) is a more directly related-to-AI version of that story (this actually came first), by Stuart Armstrong of the Future of Humanity Institute.
 
 ## Where to Go From Here
 
