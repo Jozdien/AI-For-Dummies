@@ -1,6 +1,6 @@
 # Understanding Artificial Intelligence
 
-This material is intended to give you an understanding of some of the basic ideas in artificial intelligence - specifically, machine learning, deep learning, and AI alignment.  To that end, it is divided into four parts, each intended to give you a foundation in a different learning area.
+This material is intended to give you an understanding of some of the basic ideas in artificial intelligence - specifically, machine learning, deep learning, and AI alignment.  To that end, it is divided into four parts, each intended to give you a foundation in a different learning area.  If one part is too boring for you or another is too technical, that's cool - the different parts are for covering different grounds, and if you find even one interesting, you'll know what you like.
 
 * **Part I** is to give you an intuitive understanding of the fundamental idea that started machine learning and deep learning, as well as an introductory dive into what AI alignment is, and why it's necessary.  
 

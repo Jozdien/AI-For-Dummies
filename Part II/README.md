@@ -40,7 +40,7 @@ As we have an increasing amount of data and features to examine, we can continua
 
 ## A Machine Learning Program
 
-At the end of this, there's a link to a site where you can actually run a machine learning program by yourself, and see what you get.  What follows this is just a guide to help you understand what you'll be running.
+[This](https://colab.research.google.com/drive/1owQJW9awNasTYXw68RO5iHyw23LT-5uB?usp=sharing) to a site where you can actually run a machine learning program by yourself, and see what you get.  What follows this is just a guide to help you understand what you'll be running, so I recommend you read this first.  But if you're on the fence about programming, try the colab and just refer to this page when you don't understand something.  Trying it out yourself might change your mind, but if it doesn't, there's more to AI than code.
 
 To begin with, we import two packages to help us out.
 
