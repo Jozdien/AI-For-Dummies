@@ -103,8 +103,6 @@ Of course, not all layers reduce the amount of data there is.  Some of the middl
 
 When many convolutions like these are stacked together, a computer can, from a group of pixels, understand the presence of complicated images like a vehicle, or a person.  This cascading series of convolutions forms what's known as a neural net.
 
-{Image}
-
 ### Other Applications
 
 Imagine if you could apply this principle to a video game.  The computer would read the image on the screen, identify obstacles and enemies, and choose movements and actions to optimize its position almost perfectly, at every frame.  
