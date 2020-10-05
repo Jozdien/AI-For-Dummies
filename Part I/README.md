@@ -142,3 +142,8 @@ How about we use some of that Machine Learning, and train the AI to learn what o
 The second problem, and one of the primary reasons the problem of AI Alignment is so difficult, is that whatever restrictions we place on the AI's behaviour, are all things it is motivated to try and change, especially once it reaches the level of power where it can alter itself.  It might even be able to create a new AI, which aren't affected by the same restrictions.  This is the same reason why simply programming an AI to not harm us, or to follow Asimov's Laws of Robotics would not work.
 
 If you're still reading at this point, and I'm grateful (and honestly, surprised) if you are, here's a [link](https://intelligence.org/ie-faq/#FriendlyAI) that goes into further detail (while still being incredibly interesting to read, I swear) into the nature of Friendly AI.
+
+
+## Quiz
+
+Alright, if you've reached this far, it means you read everything else.  Probably.  Hopefully.  Anyway, when you *are* done, here's a [quiz](https://joseverres42.typeform.com/to/dtSIVTLY) on it.  Take it whenever you want.

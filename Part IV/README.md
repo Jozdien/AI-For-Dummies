@@ -103,6 +103,12 @@ You remember the problems we discussed with trying to contain the AI inside a bo
 
 [Here's one take on it](https://www.reddit.com/r/rational/comments/5nty35/short_story_a_man_dies_and_is_sent_to_hell/), from Reddit user u/Sophronius.  And [this](https://www.lesswrong.com/posts/c5GHf2kMGhA4Tsj4g/the-ai-in-a-box-boxes-you) is a more directly related-to-AI version of that story (this actually came first), by Stuart Armstrong of the Future of Humanity Institute.
 
+
+## Final Task
+
+Make a submission to this [competition](https://www.kaggle.com/c/home-data-for-ml-course).  Use any algorithm you want.  You can probably find code online for this too, and like before, I wouldn't recommend against it because you almost never have to write code all on your own without reference in the real world, but I recommend understanding what you're copying.
+
+
 ## Where to Go From Here
 
 AI Safety is a relatively new field.  It's been around for just between one and two decades.  Like I mentioned earlier, this means that it currently lies in its innovation phase, where the entire field is limited only by the pure number of people coming up with ideas (as opposed to something larger, like AI, where the limitation is more technical and less related to capital).  If you want to learn more about Friendly AI, I recommend understanding more about intelligence itself (*Godel Escher Bach*), a *little* bit more in the theory of stuff like neural networks, and as much of stuff like [decision theory](https://wiki.lesswrong.com/wiki/Decision_theory) as you can get (which I promise is more fascinating than anything you've come across in this workshop - look at the [Prisoner's Dilemma](https://wiki.lesswrong.com/wiki/Prisoner%27s_dilemma) or [Newcomb's Problem](https://wiki.lesswrong.com/wiki/Newcomb%27s_problem)).

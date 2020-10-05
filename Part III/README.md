@@ -230,6 +230,12 @@ But it turns out that LOOCV has a higher variance than *k*-fold CV (when *k* < *
 
 Thus to summarize, we can say the problem is that the choice of *k* involves a bias-variance tradeoff (*k* = 1 is LOOCV, *k* = *n*/2 or the like would be the validation set approach), and so typically, one uses this method taking *k* = 5 or *k* = 10, as there is empirical proof that they yield test error estimates that suffer neither from extremely high bias or excessive variance.
 
+
+## Quiz
+
+Thought I forgot, did you?  Hah, well, if you're done reading until here, here's the [quiz](https://joseverres42.typeform.com/to/DLShRnY5).  It's pretty easy, all things given, despite how complicated this Part might seem.  As always, take it when you want to.
+
+
 ## Where to Go From Here
 
 In this folder, you should find a PDF of *An Introduction to Statistical Learning* by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani.  That book is one of the best introductions to pure ML theory out there, and while it may be a little opaque and mathematical at times, remember the objective is not to memorize it, but to understand it (and even if you don't get it all the first time, you'll come out with far more understanding - and more questions - than you went in with).  You can ignore the coding sections in the book, or find Python translations of it if you *really* want to (there are a number of them).

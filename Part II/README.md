@@ -275,6 +275,11 @@ The probability of a picture being each breed is given by the number after the n
 Now, it's time to [try something different](https://www.kaggle.com/jozdien/ai-for-dummies-week-ii-guided-transfer-learning/edit), with transfer learning.  You'll need to register a Kaggle account if you don't have one, and **then** click on the 'Copy and Edit' button on the top right of the page linked above.  If you're not redirected to the code yet, click again on the same button, which should now say 'Edit My Copy'.
 
 
+## Task
+
+You've seen code.  You've even run it and completed a few lines.  Now try [writing one](https://www.kaggle.com/jozdien/ai-workshop-part-ii-task), and submit the link to it [here](https://forms.gle/yMTJAeXBPxzZ7J4o9) (click on the share button on the top right, and change the setting from private to public).  You can submit this at any time, as usual, and if you'd like to understand what algorithm you're running, you can wait until after Part III comes out.  You'll find the actual task just as easy now as you will then, though.
+
+
 ## Where to Go From Here
 
 If you want to learn more about these ideas - and more sophisticated programming - I suggest [Kaggle's courses](https://www.kaggle.com/learn/overview) - what you've seen so far would cover the Intro to Machine Learning and the first half of the Deep Learning courses.
