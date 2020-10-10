@@ -272,7 +272,7 @@ Output:
 
 The probability of a picture being each breed is given by the number after the name in each set.
 
-Now, it's time to [try something different](https://www.kaggle.com/jozdien/ai-for-dummies-week-ii-guided-transfer-learning/edit), with transfer learning.  You'll need to register a Kaggle account if you don't have one, and **then** click on the 'Copy and Edit' button on the top right of the page linked above.  If you're not redirected to the code yet, click again on the same button, which should now say 'Edit My Copy'.
+Now, it's time to [try something different](https://www.kaggle.com/jozdien/ai-for-dummies-part-ii-guided-transfer-learning), with transfer learning.  You'll need to register a Kaggle account if you don't have one, and **then** click on the 'Copy and Edit' button on the top right of the page linked above.  If you're not redirected to the code yet, click again on the same button, which should now say 'Edit My Copy'.
 
 
 ## Task
@@ -282,4 +282,4 @@ You've seen code.  You've even run it and completed a few lines.  Now try [writi
 
 ## Where to Go From Here
 
-If you want to learn more about these ideas - and more sophisticated programming - I suggest [Kaggle's courses](https://www.kaggle.com/learn/overview) - what you've seen so far would cover the Intro to Machine Learning and the first half of the Deep Learning courses.
+If you want to learn more about these ideas - and more sophisticated programming - I suggest [Kaggle's courses](https://www.kaggle.com/learn/overview) - what you've seen so far would cover the Intro to Machine Learning and the first half of the Deep Learning courses.  If that seems like too much work, then I suggest [3Blue1Brown's *very* well-made YouTube series on Deep Learning](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi).
